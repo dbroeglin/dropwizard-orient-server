@@ -92,9 +92,9 @@ Managed instances are started after all bundles run methods and even after appli
 it from these methods.
 
 It's better to do your orient client initialization inside your own `Managed` object, to make sure this logic run after server start.
-(for example, when you use remote connection, the only whey to properly check database existence on startup would be using Managed object)
+(for example, when you use remote connection, the only way to properly check database existence on startup would be using a Managed object)
 
-You can use `plocal` connection together with embedded server: plocal doesn't requires started server and it's faster than remote connection,
+You can use `plocal` connection together with embedded server: plocal doesn't require a started server and it's faster than remote connection,
 but with embedded server you would be able to use studio together with your application (win-win).
 
 Server stores database files in '${files-path}/databases' folder, so plocal connection for server managed database would be:
